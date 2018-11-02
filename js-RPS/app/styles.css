@@ -1,0 +1,8 @@
+.container-button {
+  display: flex,
+}
+.resulty {
+  color: rgb(103, 0, 0);
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slap Game</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-9 d-flex justify-content-center" id="yeti-status">
+        <img src="https://media1.tenor.com/images/afe5f40d3ee0cc8e79a0fc0a5858740c/tenor.gif?itemid=8258235" alt="YETI-GIF">
+      </div>
+      <div class="col-3">
+        <button onclick="snowball()" type="button" class="btn-primary">SNOWBALL</button>
+        <button onclick="icePick()" type="button" class="btn-dark">ICE PICK</button>
+        <button onclick="avalanche()" type="button" class="btn-danger">AVALANCHE</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h1 id="health">Swaggy Yeti</h1>
+        <h3>Health Level: </h3>
+        <h3>Hits: </h3>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
