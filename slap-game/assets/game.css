@@ -1,0 +1,20 @@
+body {
+  background-image: url(snowy-background.jpeg);
+  background-position: inherit;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.buttons-hit  {
+  display: flex,
+}
+
+.buttons-mod  {
+  display: flex,
+  justify-center; 
+}
+
+.health-stats {
+  background-color :rgba(147, 241, 252, 0.584);
+}
