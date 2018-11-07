@@ -1,4 +1,5 @@
 //export must have import (this case, in main.js)
+
 //export default means you dont have to have curly braces on 
 //can only use export default when you export one thing
 export class Character {
