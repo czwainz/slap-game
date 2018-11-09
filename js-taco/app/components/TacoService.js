@@ -12,10 +12,7 @@ let tacoTruck = [Chicken, Carnitas, Beef]
 //PUBLIC
 
 export default class TacoService {
-  addTotalTacos() {
-    debugger
-    console.log(2)
-    // tacoTruck.total += 1
-    // return tacoTruck.total
+  constructor() {
+    console.log(3)
   }
 }

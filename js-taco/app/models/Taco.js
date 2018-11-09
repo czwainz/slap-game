@@ -5,4 +5,6 @@ export default class Taco {
     this.meat = meat
     this.total = 0
   }
+
 }
+console.log(4)

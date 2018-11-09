@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Papa Jay's Pizza</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <h1>MAKE YA PIZZA</h1>
+      </div>
+      <form class="col-5 form-check" onsubmit="app.controllers.pizzaController.addPizza(event)">
+        <input type="checkbox" name="greenPeppers">
+        <label for="greenPeppers">Green Peppers</label>
+        <input type="checkbox" name="pepperoni">
+        <label for="pepperoni">Pepperoni</label>
+        <input type="checkbox" name="pineapple">
+        <label for="pineapple">Pineapple</label>
+        <input type="checkbox" name="bananaPepper">
+        <label for="bananaPepper">Banana Peppers</label>
+        <input type="checkbox" name="sausage">
+        <label for="sausage">Sausage</label>
+        <br>
+        <button type="submit">PURCHASE PIZZA</button>
+      </form>
+      <div class="col-5">
+        <h3>Total: <span id="total">......</span></h3>
+      </div>
+    </div>
+    <div class="row">
+
+    </div>
+  </div>
+
+
+
+  <script src="app/main.js" type="module"></script>
+</body>
+
+</html>

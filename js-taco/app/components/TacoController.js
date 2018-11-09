@@ -15,7 +15,6 @@ let tacoService = new TacoService()
 
 export default class TacoController {
   constructor() {
-    console.log(1)
-
+    console.log(2)
   }
 }
