@@ -1,5 +1,6 @@
 body {
   background-color:palegreen;
+  /* opacity: .7; */
 }
 
 /* .buttons  {
@@ -7,3 +8,7 @@ body {
   display: inline-flex;
 
 } */
+
+.food-buttons {
+  padding: none;
+}

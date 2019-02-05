@@ -2,22 +2,23 @@ let chrissy = {
   foodCount: 0, //foodcount increases on click and goes from 0 to ???//
   healthIndex: 100, //health is 100 which goes up/down based on food//
   // moods change based on health index, snacks change health index
+  minHeath: 0,
   moods: [
-    { name: 'Rotten!', image: 'app/rottentomato.jpg' },
-    { name: 'Sad and Sick', image: 'app/sickandsad.jpg' },
-    { name: 'Sad', image: 'app/sad.jpg' },
-    { name: 'Yoga', image: 'app/yoga.jpg' },
-    { name: 'Happy', image: 'app/happy.jpg' },
-    { name: 'Super Happy', image: 'app/superhappy.jpg' },
-    { name: 'So Healthy!', image: 'app/likesohealthy.png' }
+    { name: 'Rotten!', img: 'app/rottentomato.jpg' },
+    { name: 'Sad and Sick', img: 'app/sickandsad.jpg' },
+    { name: 'Sad', img: 'app/sad.jpg' },
+    { name: 'Yoga', img: 'app/yoga.jpg' },
+    { name: 'Happy', img: 'app/happy.jpg' },
+    { name: 'Super Happy', img: 'app/superhappy.jpg' },
+    { name: 'So Healthy!', img: 'app/likesohealthy.png' }
   ],
   snacks: [
     { name: 'Chia Seeds', health: 1, description: 'Ch-Ch-Ch-Chia' },
-    { name: 'Banana', health: 5, description: 'B-A-N-A-N-A-S!' },
-    { name: 'Kale', health: 10, description: 'What the Kale?!' },
-    { name: 'Starburst', health: -2, description: 'Juicy!' },
+    { name: 'Bananas', health: 5, description: 'B-A-N-A-N-A-S!' },
+    { name: 'Kale Salad', health: 10, description: 'What the Kale?!' },
+    { name: 'Starbursts', health: -2, description: 'Juicy!' },
     { name: 'Cookies', health: -7, description: 'Cookie Monster!' },
-    { name: 'Pizza!', health: -15, description: 'Pizza Party!' }
+    { name: 'Pizza', health: -15, description: 'Pizza Party!' }
   ]
 }
 
@@ -29,8 +30,8 @@ function drawButtons() {
   for (let i = 0; i < chrissy.snacks.length; i++) {
     let button = chrissy.snacks[i];
     buttonTemplate += `
-    <div class="food-buttons">
-      <button onclick="eat(${button.health})">${button.name}</button>
+    <div class="food-buttons d-flex justify-content-center">
+      <button class="btn btn-secondary my-1 shadow-sm" onclick="eat(${button.health})">${button.name}</button>
     </div>
     `
   }
@@ -42,10 +43,10 @@ drawButtons()
 function update(index) {
   let template = ''
   template = `
-  <img src="${chrissy.moods[index].image}" style="height: 250px"/>
-  <h1>Chrissy</h1>
-  <h4>Health: ${chrissy.healthIndex}</h4>
-  <h4>Snacks: ${chrissy.foodCount}</h4>
+  <img src="${chrissy.moods[index].img}" style="max-width: 13rem; height: auto; border: 1px solid gray" class="shadow-lg"/>
+  <h2 class="my-2"><strong>Chrissy</strong></h1>
+  <h5>Health: ${chrissy.healthIndex}</h5>
+  <h5>Snacks: ${chrissy.foodCount}</h5>
   `
   document.getElementById('chrissy-stats').innerHTML = template
 }
@@ -54,7 +55,7 @@ function reset() {
   chrissy.foodCount = 0
   chrissy.healthIndex = 100
   changePics()
-  update()
+  update(chrissy.healthIndex)
 }
 
 function eat(healthIndex) {
@@ -85,7 +86,7 @@ function changePics() {
   } else if (chrissy.healthIndex >= 1) {
     update(1)
     return
-  } else if (chrissy.healthIndex == 0) {
+  } else if (chrissy.healthIndex = 0) {
     update(0)
     return
   }
@@ -94,12 +95,15 @@ function changePics() {
 changePics()
 
 
-
-// STRETCH GOALLLL
-
 //this function is to say that if snack count gets to high, you feel sick
 // function snackOverload() {
-//   if (chrissy.foodCount = 25)
-//     return
+//   let out = ''
+//   out = `<img src="https://tenor.com/view/gross-vomit-sick-sickening-jim-carrey-gif-7731496" />`
+//   if (chrissy.foodCount == 25) {
+//     return document.getElementById('hurl').innerHTML = out
+//   }
 // }
+// snackOverload()
+// window.setTimeout(snackOverload, 5000)
+
 // update photo to show Jim Carey Hurling https://tenor.com/view/gross-vomit-sick-sickening-jim-carrey-gif-7731496
