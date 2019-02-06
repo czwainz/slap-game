@@ -14,27 +14,26 @@
 <body>
   <div id="app">
     <div class="contianer-fluid">
-      <div class="row d-flex justify-content-center" style="text-align: center;">
+      <div class="row d-flex justify-content-center my-2" style="text-align: center;">
         <div class="col-4">
           <img style="height: 200px" src="https://images.unsplash.com/photo-1506494344405-831c8759e714?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2ac0b805e2c34ae9530c4306970b8b94&auto=format&fit=crop&w=1951&q=80"
-            alt="rock">
-          <button onclick="play(0)">ROCK</button>
+            alt="rock" class="shadow-sm border rounded">
+          <button onclick="play(0)" class="btn btn-primary my-2 shadow-sm">ROCK</button>
         </div>
         <div class="col-4">
           <img style="height: 200px;" src="https://images.unsplash.com/photo-1517664946321-87d2e16ebaa6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0052c74d5f9914b94c465eb6d49eab2a&auto=format&fit=crop&w=1951&q=80"
-            alt="paper">
-          <button onclick="play(1)">PAPER</button>
+            alt="paper" class="shadow-sm border rounded">
+          <button onclick="play(1)" class="btn btn-warning my-2 shadow-sm">PAPER</button>
         </div>
         <div class="col-4">
           <img style="height: 200px" src="https://images.unsplash.com/photo-1503792501406-2c40da09e1e2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f53c8bc9ecf8d747970d395a5b18a3e0&auto=format&fit=crop&w=1952&q=80"
-            alt="scissors">
-          <button onclick="play(2)">SCISSORS</button>
+            alt="scissors" class="shadow-sm border rounded">
+          <button onclick="play(2)" class="btn btn-success my-2 shadow-sm">SCISSORS</button>
         </div>
       </div>
       <div class="row d-flex justify-content-center;">
         <div class="col-4"></div>
-        <h1 id="result" style="color: yellowgreen; text-shadow: 0 0 5px black; text-align: center;">
-        </h1>
+        <h1 id="result" class="resulty" style="color: yellowgreen; text-shadow: 0 0 5px black; text-align: center;"></h1>
       </div>
     </div>
   </div>

@@ -1,3 +1,5 @@
+//create array of choices with ids
+//show which RPS beats the other RPS
 let choices = [
   {
     name: "Rock",
@@ -16,10 +18,12 @@ let choices = [
   }
 ]
 
+//generate a random number for computer to choose from
 function getNum(max) {
   return Math.floor(Math.random() * max);
 }
 
+//have computer choice and 
 function play(num) {
   let compChoice = choices[getNum(3)]
   let playerChoice = choices[num]
@@ -29,9 +33,9 @@ function play(num) {
   if (playerChoice.id == compChoice.id) {
     result += 'Tie';
   } else if (playerChoice.beats == compChoice.id) {
-    result += 'Player Win';
+    result += 'Player Wins';
   } else {
-    result += 'Player Lose'
+    result += 'Player Loses'
   }
   document.getElementById('result').innerText = result;
 }
