@@ -23,7 +23,8 @@ function getNum(max) {
   return Math.floor(Math.random() * max);
 }
 
-//have computer choice and 
+//have computer choice and player choice and use game logic
+
 function play(num) {
   let compChoice = choices[getNum(3)]
   let playerChoice = choices[num]
