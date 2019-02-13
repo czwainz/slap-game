@@ -47,6 +47,7 @@ export default class VendController {
   constructor() {
     //calls the draw products at the start of the application
     drawProducts()
+    drawVendedItems()
   }
   addQuarter() {
     console.log(1)
