@@ -12,3 +12,4 @@ export default class Auto {
     this.imgUrl = data.imgUrl
   }
 }
+
